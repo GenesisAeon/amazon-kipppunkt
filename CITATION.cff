@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: >
+  If you use this software in your research, please cite it using the metadata below.
+title: "Amazonas-Kipppunkt: interactive double-well sandbox for amazon-utac (P19)"
+abstract: >
+  Interactive companion to GenesisAeon Package 19 (amazon-utac). Ports the cubic
+  double-well ODE of the Amazon forest–savanna transition and keeps the legacy
+  1 %/yr model rate separate from the observed INPE PRODES 2024/2025 rate of
+  0.17 %/yr. Calibrated against Lovejoy & Nobre (2019) and Boulton et al. (2022).
+version: "0.1.0"
+date-released: "2026-09-04"
+license: MIT
+repository-code: "https://github.com/GenesisAeon/amazon-kipppunkt"
+keywords:
+  - amazon
+  - deforestation
+  - tipping point
+  - savannisation
+  - UTAC
+  - double-well
+  - GenesisAeon
+  - PRODES
+authors:
+  - name: "MOR Research Collective / GenesisAeon"
+    email: "joberoemer@gmail.com"
+references:
+  - type: software
+    title: "amazon-utac: Amazon Rainforest Savannisation Threshold UTAC Model"
+    repository-code: "https://github.com/GenesisAeon/amazon-utac"
+    doi: "10.5281/zenodo.20746954"
+  - type: article
+    title: "Amazon tipping point: Last chance for action"
+    authors:
+      - family-names: Lovejoy
+        given-names: Thomas E.
+      - family-names: Nobre
+        given-names: Carlos A.
+    journal: "Science Advances"
+    volume: 5
+    issue: 12
+    year: 2019
+    doi: "10.1126/sciadv.aba2949"
+  - type: article
+    title: "Pronounced loss of Amazon rainforest resilience since the early 2000s"
+    authors:
+      - family-names: Boulton
+        given-names: Chris A.
+      - family-names: Lenton
+        given-names: Timothy M.
+      - family-names: Boers
+        given-names: Niklas
+    journal: "Nature Climate Change"
+    volume: 12
+    pages: "271-278"
+    year: 2022
+    doi: "10.1038/s41558-022-01287-8"

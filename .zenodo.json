@@ -1,0 +1,30 @@
+{
+  "title": "Amazonas-Kipppunkt — interactive double-well sandbox for amazon-utac (P19)",
+  "description": "<p>Interactive physics sandbox for the Amazon forest-savanna transition, porting the cubic double-well ODE from GenesisAeon's amazon-utac (P19) savanna_attractor.py -- no invented numbers. Keeps the legacy 1%/yr deforestation-rate model assumption explicitly separate from the observed INPE PRODES 2024/2025 rate of 0.17%/yr. Calibrated against Lovejoy &amp; Nobre (2019) and Boulton et al. (2022). Part of the <strong>GenesisAeon</strong> interactive-sandbox series.</p>",
+  "creators": [
+    {
+      "name": "Römer, Johann",
+      "affiliation": "Independent Researcher / MOR Research Collective"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "0.1.0",
+  "keywords": [
+    "GenesisAeon",
+    "Amazon",
+    "deforestation",
+    "tipping point",
+    "UTAC",
+    "double-well",
+    "PRODES",
+    "interactive sandbox",
+    "open-science"
+  ],
+  "communities": [
+    {
+      "identifier": "genesisaeon"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "generated": "2026-09-05",
+  "app": {
+    "id": "amazon-kipppunkt",
+    "title": "Amazonas-Kipppunkt",
+    "kind": "kipppunkt",
+    "live_url": "https://amazon-kipppunkt.vercel.app",
+    "repo_url": "https://github.com/GenesisAeon/amazon-kipppunkt",
+    "llms_txt_url": "https://amazon-kipppunkt.vercel.app/llms.txt"
+  },
+  "source_package": {
+    "name": "amazon-utac",
+    "package_id": 19,
+    "repo_url": "https://github.com/GenesisAeon/amazon-utac",
+    "ported_note": "1:1 port of constants.py / savanna_attractor.py; cubic integral solved analytically (closed-form antiderivative) instead of the source package's numerical trapezoid integration."
+  },
+  "primary_sources": [
+    { "authors": "Lovejoy, T.E. & Nobre, C.", "year": 2019, "title": "Amazon tipping point", "journal": "Science Advances", "doi": null }
+  ],
+  "verified_quantities": [
+    { "name": "H_FOREST_ATTRACTOR", "value": 0.8, "unit": null, "source": "amazon-utac constants.py" },
+    { "name": "H_SAVANNA_ATTRACTOR", "value": 0.15, "unit": null, "source": "amazon-utac constants.py" },
+    { "name": "H_TIPPING_LOW", "value": 0.75, "unit": null, "source": "Lovejoy & Nobre 2019 (20% deforestation)" },
+    { "name": "H_TIPPING_HIGH", "value": 0.8, "unit": null, "source": "Lovejoy & Nobre 2019 (~25% deforestation)" },
+    { "name": "CURRENT_FOREST_FRACTION", "value": 0.839, "unit": "fraction", "source": "INPE PRODES 2025" },
+    { "name": "ANNUAL_DEFORESTATION_RATE_OBSERVED_2025", "value": 0.0017, "unit": "fraction/year", "source": "INPE PRODES 2024/2025: 5,796 km² of 3,483,495 km² remaining" },
+    { "name": "ETA_AMAZON", "value": 0.25, "unit": null, "source": "amazon-utac constants.py" },
+    { "name": "PRODES_YOY_DROP_PCT", "value": 11.08, "unit": "percent", "source": "INPE PRODES 2025 year-on-year deforestation drop" }
+  ],
+  "framework_overlay": { "used": true, "terms": ["CREP"], "note": "Γ_Amazon inherited from the source package amazon-utac, not added by this sandbox." },
+  "cross_app_relations": [
+    { "app_id": "kaskaden-sandbox", "relation": "shares_modeled_element", "detail": "Amazon is one of the 4 Wunderling tipping elements modeled in kaskaden-sandbox." }
+  ],
+  "disclaimer": "Die ODE und alle Konstanten stammen 1:1 aus amazon-utac. Das analytische Integral ist eine mathematisch äquivalente, exakte Alternative zur numerischen Integration des Quellpakets."
+}

@@ -1,0 +1,19 @@
+# Amazonas-Kipppunkt
+
+> Physik-Sandbox der Wald-Savanne-Bistabilität. Kubische Doppelmulden-ODE dH/dt = −r·(H−H_s)(H−H_saddle(Γ))(H−H_f), portiert 1:1 aus amazon-utac (P19), mit analytischem Antiderivativ statt numerischer Integration.
+
+Aktueller Beobachtungsstand eingebettet: PRODES 2025 zeigt ~83,9 % verbliebenen Wald (16,1 % entwaldet), reale Entwaldungsrate 2024/25 ≈ 0,17 %/Jahr (5.796 km² auf 3.483.495 km² verbleibend) — deutlich unter der alten Modellannahme von 1 %/Jahr.
+
+## Quellen
+- Lovejoy, T.E. & Nobre, C. (2019): Kipppunkt-Schwelle bei 20–25 % Entwaldung
+- INPE PRODES 2024/2025 (Jahresbericht)
+- Quellpaket: https://github.com/GenesisAeon/amazon-utac
+
+## Maschinenlesbar
+- [context.json](/context.json)
+- Schema: https://github.com/GenesisAeon/apps-hub/blob/main/docs/ai-context-schema.md
+
+## Ökosystem
+- Teil der GenesisAeon Apps-Hub-Reihe: https://github.com/GenesisAeon/apps-hub
+- Zugehöriges Paket im Klimakatalog: https://klimakatalog.vercel.app/p/amazon-utac
+- Modelliert als eines von vier Kipppunkten in https://kaskaden-sandbox.vercel.app

@@ -24,9 +24,9 @@
     { "name": "H_TIPPING_LOW", "value": 0.75, "unit": null, "source": "Lovejoy & Nobre 2019 (20% deforestation)" },
     { "name": "H_TIPPING_HIGH", "value": 0.8, "unit": null, "source": "Lovejoy & Nobre 2019 (~25% deforestation)" },
     { "name": "CURRENT_FOREST_FRACTION", "value": 0.839, "unit": "fraction", "source": "INPE PRODES 2025" },
-    { "name": "ANNUAL_DEFORESTATION_RATE_OBSERVED_2025", "value": 0.0017, "unit": "fraction/year", "source": "INPE PRODES 2024/2025: 5,796 km² of 3,483,495 km² remaining" },
+    { "name": "ANNUAL_DEFORESTATION_RATE_OBSERVED_2025", "value": 0.0016, "unit": "fraction/year", "source": "INPE PRODES 2024/2025 consolidated figure: 5,731 km² of 3,483,495 km² remaining" },
     { "name": "ETA_AMAZON", "value": 0.25, "unit": null, "source": "amazon-utac constants.py" },
-    { "name": "PRODES_YOY_DROP_PCT", "value": 11.08, "unit": "percent", "source": "INPE PRODES 2025 year-on-year deforestation drop" }
+    { "name": "PRODES_YOY_DROP_PCT", "value": 12.07, "unit": "percent", "source": "INPE PRODES 2025 consolidated year-on-year deforestation drop" }
   ],
   "framework_overlay": { "used": true, "terms": ["CREP"], "note": "Γ_Amazon inherited from the source package amazon-utac, not added by this sandbox." },
   "cross_app_relations": [

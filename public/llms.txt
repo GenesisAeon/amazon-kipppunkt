@@ -2,7 +2,7 @@
 
 > Physik-Sandbox der Wald-Savanne-Bistabilität. Kubische Doppelmulden-ODE dH/dt = −r·(H−H_s)(H−H_saddle(Γ))(H−H_f), portiert 1:1 aus amazon-utac (P19), mit analytischem Antiderivativ statt numerischer Integration.
 
-Aktueller Beobachtungsstand eingebettet: PRODES 2025 zeigt ~83,9 % verbliebenen Wald (16,1 % entwaldet), reale Entwaldungsrate 2024/25 ≈ 0,17 %/Jahr (5.796 km² auf 3.483.495 km² verbleibend) — deutlich unter der alten Modellannahme von 1 %/Jahr.
+Aktueller Beobachtungsstand eingebettet: PRODES 2025 zeigt ~83,9 % verbliebenen Wald (16,1 % entwaldet), reale Entwaldungsrate 2024/25 ≈ 0,16 %/Jahr (konsolidiert: 5.731 km² auf 3.483.495 km² verbleibend, korrigiert von einer früheren 5.796-km²-Schätzung) — deutlich unter der alten Modellannahme von 1 %/Jahr.
 
 ## Quellen
 - Lovejoy, T.E. & Nobre, C. (2019): Kipppunkt-Schwelle bei 20–25 % Entwaldung

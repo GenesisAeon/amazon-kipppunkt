@@ -32,7 +32,7 @@ Kalibrierung (`amazon_utac/constants.py`, Stand PRODES 2025):
 | Γ_Amazon | arctanh(0,25) / 2,2 ≈ 0,116 | η = 25 %-Schwelle |
 | H heute | 0,839 | ~16,1 % entwaldet (PRODES 2025) |
 | ρ_Modell | 0,01 a⁻¹ | Legacy-Annahme, 1 % des Restwaldes |
-| ρ_PRODES | 0,0017 a⁻¹ | INPE 2024/25, 5.796 km² |
+| ρ_PRODES | 0,0016 a⁻¹ | INPE 2024/25, 5.731 km² (konsolidiert) |
 | Schwelle | 20–25 % | Lovejoy & Nobre 2019 |
 
 Γ wächst mit zusätzlicher Entwaldung wie in `system.py`:

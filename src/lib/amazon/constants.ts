@@ -28,10 +28,11 @@ export const CURRENT_DEFORESTATION_FRACTION = 0.161;
 /** Legacy model default: ~1 %/yr of remaining forest */
 export const ANNUAL_DEFORESTATION_RATE = 0.01;
 /**
- * Actual INPE PRODES 2024/2025 rate: 5,796 km² / 3,483,495 km² remaining
- * ≈ 0.17 %/yr — kept separate from ANNUAL_DEFORESTATION_RATE on purpose.
+ * Actual INPE PRODES 2024/2025 rate (consolidated figure): 5,731 km² /
+ * 3,483,495 km² remaining ≈ 0.16 %/yr — kept separate from
+ * ANNUAL_DEFORESTATION_RATE on purpose.
  */
-export const ANNUAL_DEFORESTATION_RATE_OBSERVED_2025 = 0.0017;
+export const ANNUAL_DEFORESTATION_RATE_OBSERVED_2025 = 0.0016;
 
 export const DEFORESTATION_THRESHOLD_LOW = 0.2;
 export const DEFORESTATION_THRESHOLD_HIGH = 0.25;
@@ -44,9 +45,10 @@ export const GAMMA_AMAZON = Math.atanh(ETA_AMAZON) / CREP_SIGMA;
 export const R_FOREST = 0.05;
 
 export const PRODES_ORIGINAL_AREA_KM2 = 4_153_741;
-export const PRODES_DEFORESTED_2025_KM2 = 670_246;
-export const PRODES_CLEARED_2025_KM2 = 5_796;
-export const PRODES_YOY_DROP_PCT = 11.08;
+export const PRODES_DEFORESTED_2025_KM2 = 670_181;
+/** Consolidated INPE figure, revised down from an earlier 5,796 km² preliminary estimate. */
+export const PRODES_CLEARED_2025_KM2 = 5_731;
+export const PRODES_YOY_DROP_PCT = 12.07;
 
 export const START_YEAR = 2025;
 export const HORIZON_YEARS = 80;
@@ -70,9 +72,9 @@ export const RATE_PRESETS = [
   },
   {
     id: "prodes",
-    label: "PRODES 0,17 %",
+    label: "PRODES 0,16 %",
     rate: ANNUAL_DEFORESTATION_RATE_OBSERVED_2025,
-    hint: "INPE 2024/25, 5.796 km²",
+    hint: "INPE 2024/25, 5.731 km²",
   },
   {
     id: "legacy",

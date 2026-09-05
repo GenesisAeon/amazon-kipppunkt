@@ -6,8 +6,8 @@ abstract: >
   Interactive companion to GenesisAeon Package 19 (amazon-utac). Ports the cubic
   double-well ODE of the Amazon forest–savanna transition and keeps the legacy
   1 %/yr model rate separate from the observed INPE PRODES 2024/2025 rate of
-  0.17 %/yr. Calibrated against Lovejoy & Nobre (2019) and Boulton et al. (2022).
-version: "0.2.0"
+  0.16 %/yr (consolidated). Calibrated against Lovejoy & Nobre (2019) and Boulton et al. (2022).
+version: "0.3.0"
 date-released: "2026-09-04"
 license: MIT
 repository-code: "https://github.com/GenesisAeon/amazon-kipppunkt"

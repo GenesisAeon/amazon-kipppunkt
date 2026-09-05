@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "generated": "2026-09-05",
   "app": {
     "id": "amazon-kipppunkt",
@@ -28,6 +28,22 @@
     { "name": "ETA_AMAZON", "value": 0.25, "unit": null, "source": "amazon-utac constants.py" },
     { "name": "PRODES_YOY_DROP_PCT", "value": 12.07, "unit": "percent", "source": "INPE PRODES 2025 consolidated year-on-year deforestation drop" }
   ],
+  "tipping": {
+    "kind": "fold",
+    "value": 0.225,
+    "unit": "fraction deforested",
+    "derived_from": "DEFORESTATION_THRESHOLD_MID, Lovejoy & Nobre 2019 midpoint of the double-well's fold band (20-25%)",
+    "defined": true
+  },
+  "regen": {
+    "kind": "undefined",
+    "value": null,
+    "unit": null,
+    "derived_from": "amazon-utac's R_FOREST is a growth-rate parameter of the double-well ODE, not an independently derived recovery/regeneration quantity -- left undefined rather than guessed.",
+    "defined": false
+  },
+  "comparable": false,
+  "formula_ref": "amazon-utac savanna_attractor.py: dH/dt = -r*(H-H_s)*(H-H_saddle(Gamma))*(H-H_f)",
   "framework_overlay": { "used": true, "terms": ["CREP"], "note": "Γ_Amazon inherited from the source package amazon-utac, not added by this sandbox." },
   "cross_app_relations": [
     { "app_id": "kaskaden-sandbox", "relation": "shares_modeled_element", "detail": "Amazon is one of the 4 Wunderling tipping elements modeled in kaskaden-sandbox." }

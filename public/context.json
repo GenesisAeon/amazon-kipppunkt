@@ -33,14 +33,16 @@
     "value": 0.225,
     "unit": "fraction deforested",
     "derived_from": "DEFORESTATION_THRESHOLD_MID, Lovejoy & Nobre 2019 midpoint of the double-well's fold band (20-25%)",
-    "defined": true
+    "defined": true,
+    "origin": "literature"
   },
   "regen": {
     "kind": "undefined",
     "value": null,
     "unit": null,
     "derived_from": "amazon-utac's R_FOREST is a growth-rate parameter of the double-well ODE, not an independently derived recovery/regeneration quantity -- left undefined rather than guessed.",
-    "defined": false
+    "defined": false,
+    "origin": "undefined"
   },
   "comparable": false,
   "formula_ref": "amazon-utac savanna_attractor.py: dH/dt = -r*(H-H_s)*(H-H_saddle(Gamma))*(H-H_f)",

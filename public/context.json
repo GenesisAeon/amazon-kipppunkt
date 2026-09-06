@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1.0",
-  "generated": "2026-09-05",
+  "schema_version": "1.2.0",
+  "generated": "2026-09-06",
   "app": {
     "id": "amazon-kipppunkt",
     "title": "Amazonas-Kipppunkt",
@@ -41,6 +41,14 @@
     "value": null,
     "unit": null,
     "derived_from": "amazon-utac's R_FOREST is a growth-rate parameter of the double-well ODE, not an independently derived recovery/regeneration quantity -- left undefined rather than guessed.",
+    "defined": false,
+    "origin": "undefined"
+  },
+  "entropy_bg": {
+    "kind": "undefined",
+    "value": null,
+    "unit": null,
+    "derived_from": "No background energetic/radiative quantity is currently exposed in this sandbox's verified_quantities -- left undefined rather than derived specifically to fill this slot.",
     "defined": false,
     "origin": "undefined"
   },

@@ -43,6 +43,8 @@ import {
 } from "@/lib/amazon/integrate";
 import { cubicOde } from "@/lib/amazon/landscape";
 import { cn } from "@/lib/utils";
+import { LocaleSwitch } from "@/components/locale-switch";
+import { useLocale } from "@/lib/i18n/locale";
 
 const YEARS_PER_SEC = 10;
 const RATE_EPS = 1e-5;
@@ -51,12 +53,13 @@ function sameRate(a: number, b: number) {
   return Math.abs(a - b) < RATE_EPS;
 }
 
-function yearOrDash(y: number | null) {
-  if (y === null || !Number.isFinite(y)) return "nicht bis 2105";
+function yearOrDash(y: number | null, fallback: string) {
+  if (y === null || !Number.isFinite(y)) return fallback;
   return formatYear(y, 0);
 }
 
 export function AmazonSandbox() {
+  const { t } = useLocale();
   const [rate, setRate] = useState(ANNUAL_DEFORESTATION_RATE_OBSERVED_2025);
   const [year, setYear] = useState(START_YEAR);
   const [playing, setPlaying] = useState(false);
@@ -143,22 +146,23 @@ export function AmazonSandbox() {
         <header className="border-b border-border">
           <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8 lg:py-8">
             <div className="max-w-2xl">
-              <p className="mb-2 text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-                GenesisAeon P19 · amazon-utac
-              </p>
+              <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
+                <p className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                  {t.eyebrow}
+                </p>
+                <LocaleSwitch />
+              </div>
               <h1 className="font-display text-3xl leading-tight tracking-[-0.03em] text-balance sm:text-4xl">
-                Amazonas-Kipppunkt
+                {t.title}
               </h1>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-pretty text-muted-foreground">
-                Kubische Doppelmulden-Gleichung aus amazon-utac. Zwei Zahlenreihen
-                bleiben getrennt: die alte Modellannahme von 1&nbsp;%/Jahr und die
-                PRODES-Realität 2025 von 0,17&nbsp;%/Jahr.
+                {t.lead}
               </p>
             </div>
             <div className="flex flex-wrap gap-2">
               <Badge variant="outline">Γ ≈ {formatGamma(GAMMA_AMAZON)}</Badge>
-              <Badge variant="forest">H<sub className="ml-0.5">Wald</sub> = 0,80</Badge>
-              <Badge variant="savanna">H<sub className="ml-0.5">Savanne</sub> = 0,15</Badge>
+              <Badge variant="forest">H<sub className="ml-0.5">{t.forest}</sub> = 0,80</Badge>
+              <Badge variant="savanna">H<sub className="ml-0.5">{t.savanna}</sub> = 0,15</Badge>
             </div>
           </div>
         </header>
@@ -571,6 +575,7 @@ function ThresholdCard({
   linear: { lower: number | null; midpoint: number | null; upper: number | null };
   saddleYear: number | null;
 }) {
+  const { t } = useLocale();
   const titleClass =
     tone === "observed"
       ? "text-observed"
@@ -582,13 +587,13 @@ function ThresholdCard({
       <p className={cn("text-sm font-medium", titleClass)}>{title}</p>
       <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5 text-xs">
         <dt className="text-muted-foreground">20 %</dt>
-        <dd className="tabular-nums">{yearOrDash(linear.lower)}</dd>
+        <dd className="tabular-nums">{yearOrDash(linear.lower, t.notUntil2105)}</dd>
         <dt className="text-muted-foreground">22,5 %</dt>
-        <dd className="tabular-nums">{yearOrDash(linear.midpoint)}</dd>
+        <dd className="tabular-nums">{yearOrDash(linear.midpoint, t.notUntil2105)}</dd>
         <dt className="text-muted-foreground">25 %</dt>
-        <dd className="tabular-nums">{yearOrDash(linear.upper)}</dd>
+        <dd className="tabular-nums">{yearOrDash(linear.upper, t.notUntil2105)}</dd>
         <dt className="text-muted-foreground">ODE-Sattel</dt>
-        <dd className="tabular-nums">{yearOrDash(saddleYear)}</dd>
+        <dd className="tabular-nums">{yearOrDash(saddleYear, t.notUntil2105)}</dd>
       </dl>
     </div>
   );
